@@ -1,0 +1,748 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>HealthyHarvest</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.css' %}" />
+  <!-- fonts awesome style -->
+  <link href="{% static 'main/css/font-awesome.min.css' %}" rel="stylesheet" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,,600,700|Poppins:400,500,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'main/css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'main/css/responsive.css' %}" rel="stylesheet" />
+</head>
+<style>
+  #google_element
+  {
+    float: right;
+  }
+</style>
+<body>
+  <div id="google_element"></div>
+  <div class="hero_area">
+    <!-- header section -->
+    <header class="header_section">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <div class="custom_menu-btn">
+          <button onclick="openNav()">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+        </div>
+        <div id="myNav" class="overlay">
+          <div class="menu_btn-style ">
+            <button onclick="closeNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <a class="active" href="">
+              Home
+            </a>
+            <a class="" href="#crops">
+              Crops
+            </a>
+            <a class="" href="#seasons">
+              Seasons
+            </a>
+            <a class="" href="#about">
+              About
+            </a>
+            <a class="" href="{% url 'schemes' %}">
+              Govt Schemes
+            </a>
+            <a class="" href="#cptool">
+              Crop Predictor
+            </a>
+            <a class="" href="#mandi">
+              Mandi Prices
+            </a>
+            <a class="" href="#contactus">
+              Contact Us
+            </a>
+            <a class="" href="{% url 'seasons' %}">
+              crop seasons
+            </a>
+            <a class="" href="{% url 'stats' %}">
+              crop statistics
+            </a>
+            <a class="" href="{% url 'climate' %}">
+              climate and condition
+            </a>
+          </div>
+          
+        </div>
+        <a class="navbar-brand" href="#">
+          <span>
+            HealthyHarvest
+          </span>
+        </a>
+      </nav>
+    </header>
+    <!-- end header section -->
+    <section class="slider_section position-relative">
+      <div>
+          <div style="float:left">
+            <a class="navbar-brand" href="">
+              <span>HealthyHarvest</span>
+            </a>
+          </div>
+      </div>
+      
+      
+      <div class="box">
+        <div class="row">
+          <div class="col-lg-10 ml-auto">
+            <div class="detail-box">
+              <h1>
+                Healthy <br>
+                Harvest
+              </h1>
+              <div class="btn-box">
+                <a href="#about" class="btn-1">
+                  About
+                </a>
+                <a href="{% url 'schemes' %}" class="btn-2">
+                  Govt <br>schemes
+                </a> 
+                <a href="#cptool" class="btn-1">
+                  Crop<br>Predictor
+                </a>
+                <a href="#mandi" class="btn-2">
+                  Mandi <br>Prices
+                </a>
+                
+                <a href="{% url 'seasons' %}" class="btn-1">
+                  crop <br>season
+                </a>
+                <a href="{% url 'stats' %}" class="btn-2">
+                  crop <br>statistics
+                </a>
+                <a href =  "{% url 'climate' %}" class="btn-1">
+                  climate <br>and<br> condition
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+  </div>
+
+  <!-- Crops section -->
+
+  <section class="wedo_section layout_padding section_pr" id="crops">
+    <div class="container">
+      <div class="heading_container">
+        <h2><span>Crops</span> in India</h2>
+      </div>
+      <div class="carousel-wrap ">
+        <div class="owl-carousel wedo_owl_carousel">
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{% static 'main/images/rice.jpg' %}" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Rice
+                </h5>
+                <p>
+                  A Kharif crop, raised preferably in low-lying areas that remain flooded mainly during the rainy season. Provides nutrients like carbohydrates, calcium, iron, ...
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Rice_production_in_India">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="https://images.squarespace-cdn.com/content/v1/5c8ad39ba09a7e292fb967b7/1552675818322-TFCDNZ9AZPGHXN51S80M/hero_page.jpg?format=2500w" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Wheat
+                </h5>
+                <p>
+                  A Rabi crop, sown in winters and harvested in the months of spring. Provides nutrients such as protein, dietary fiber, manganese, phosphorus and niacin ...
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Wheat">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box ">
+              <div class="img-box">
+                <img src="https://www.agrifarming.in/wp-content/uploads/2015/04/Maize-Farming.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Maize
+                </h5>
+                <p>
+                  Maize cannot tolerate frost and hence it is a Kharif crop sown just before the monsoons arrive in India. Provides nutrients such as thiamine, riboflavin, niacin ...
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Maize">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          {% comment %} <div class="item">
+            <div class="box ">
+              <div class="img-box">
+                <img src="https://www.vaayujaagrofarms.com/img/images/promogrante.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Pomegranate
+                </h5>
+                <p>
+                  Pomegranate plants flower and provide fruits throughout the year in central and southern India. Provides nutrients such as vitamins C and B, potassium, folic acid, iron ...
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Pomegranate">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div> {% endcomment %}
+          <div class="item">
+            <div class="box ">
+              <div class="img-box">
+                <img src="https://images.indulgexpress.com/uploads/user/imagelibrary/2019/5/16/original/Mango.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Mango
+                </h5>
+                <p>
+                  The mango season in India starts in March-April from the South West and moves towards the North East in June-July. It is a good source of folate, vitamins A, B, C, K, and E ...
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Mango">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box ">
+              <div class="img-box">
+                <img src="https://www.agrifarming.in/wp-content/uploads/2015/03/oranges-1117628_960_720.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Orange
+                </h5>
+                <p>
+                  The ideal season for cultivation of sweet orange is July to September.Nagpur Orange is the best variety of orange in India. It is a good source of fiber and Vitamin C ...
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Orange_(fruit)">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box ">
+              <div class="img-box">
+                <img src="https://i.ytimg.com/vi/LaMg7W2hhrY/maxresdefault.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Coconut
+                </h5>
+                <p>
+                  India the largest producer of Coconut which is grown in the states of Kerala, Tamilnadu, Karnataka, Andhra Pradesh. Coconut lowers blood pressure and can help aid high cholesterol.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Coconut">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box ">
+              <div class="img-box">
+                <img src="https://d2xsikgwxkxyoe.cloudfront.net/media/56226/cotton-farm-harvesting.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Cotton
+                </h5>
+                <p>
+                  Cotton is an important fiber and cash crop which plays a dominant role in the industrial and agricultural economy of India. India is the second largest producer of cotton.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Cotton">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box ">
+              <div class="img-box">
+                <img src="https://img.onmanorama.com/content/dam/mm/en/travel/outside-kerala/images/2021/1/25/wayanad-coffee-plantation.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Coffee
+                </h5>
+                <p>
+                  Coffee production in India is dominated in the hill tracts of South Indian states, with Karnataka accounting for 71%, followed by Kerala. Coffee contains riboflavin, potassium, manganese ...
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Coffee_production_in_India ">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end crops section -->
+
+  <!-- Cropping seasons section -->
+
+  <section class="choose_section layout_padding section_pl " id="seasons">
+    <div class="container py_mobile_45">
+      <div class="heading_container heading_center">
+        <h2>Cropping <span>seasons</span> in <span>India</span></h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="box ">
+            <div class="box_content">
+              <div class="detail-box">
+                <h5>
+                  Rabi
+                </h5>
+                <p>
+                  Rabi crops are sown in winter from October to December and harvested in summer from April to June. Some of the important rabi crops are wheat, barley, peas, gram, and mustard. 
+                </p>
+              </div>
+            </div>
+            <div class="btn-box">
+              <a href="https://en.wikipedia.org/wiki/Rabi_crop" alt="Rabi season">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box ">
+            <div class="box_content">
+              <div class="detail-box">
+                <h5>
+                  Kharif
+                </h5>
+                <p>
+                  Kharif crops are grown with the onset of monsoon in different parts of the country and harvested in September-October. Important crops grown during this season are paddy, maize, jowar, bajra, cotton, and jute.
+                </p>
+              </div>
+            </div>
+            <div class="btn-box">
+              <a href="https://en.wikipedia.org/wiki/Kharif_crop" alt="Kharif season">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box ">
+            <div class="box_content">
+              <div class="detail-box">
+                <h5> 
+                  Zaid
+                </h5>
+                <p>
+                  In between the Rabi and the Kharif seasons, there is a short season during the summer months known as the Zaid season. Some of the crops produced during Zaid are watermelon, muskmelon, cucumber vegetables, and fodder crops.
+                </p>
+              </div>
+            </div>
+            <div class="btn-box">
+              <a href="https://en.wikipedia.org/wiki/Zaid_crops" alt="Zaid season">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- end seasons section -->
+
+  <!-- About section -->
+
+  <section class="blog_section layout_padding section_pr" id="about">
+    <div class="container">
+      <div class="heading_container">
+        <h2>About</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="blog_content">
+            <div class="img-box">
+              <img src="{% static 'main/images/blog-img.jpg' %}" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="blog_detail">
+            <p>
+              This website provides all the details related to crops, the cropping seasons in India along with a Crop Prediction tool which predicts the crop which will give you more yield based on the given conditions. It also tells you about the most grown crops of your state along with their prices.
+            </p>
+            <a href="#cptool">
+              Try Now!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- predictor section -->
+
+  <section class="contact_section layout_padding section_pl " id="cptool">
+    <div class="container py_mobile_45">
+      <div class="heading_container">
+        <h2>Crop <span>Predictor</span></h2>
+      </div>
+      <div class="form_container">
+        <form action="{% url 'result' %}" id="form">
+          <div class="row">
+            <div class="col-md-6">
+              <input type="number" required placeholder="Nitrogen" name = "N"  min=0 max=43 required>
+              <input type="number" required placeholder="Phosphorus" name = "P" min=0 max=43 required/>
+              <input type="text" required placeholder="Potassium" name = "K"min=0 max=43 required/>
+              <input type="text" required placeholder="Temperature" name = "T"/>
+            </div>
+            <div class="col-md-6">
+              <input type="text" required placeholder="Humidity" name = "Humidity" min=0 max=43 required/>
+              <input type="text" required placeholder="pH" name = "pH"min=0 max=43 required/>
+              <input type="text" required placeholder="Rainfall" name = "Rainfall"min=0 max=43 required/>
+              <select name="State" id="State">
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="West Bengal">West Bengal</option>
+              </select>
+            </div>
+          </div>
+        </form> 
+      </div> 
+      <div class="d-flex">
+        <button type="submit" form="form" value="Submit">
+          Submit
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- end tool section -->
+
+    <!-- Mandi section -->
+
+    <section class="blog_section layout_padding section_pr" id="mandi">
+      <div class="container">
+        <div class="heading_container">
+          <h2>Mandi prices</h2>
+        </div>
+        <!--
+        <div class="form_container">
+          <form action="{% url 'prices' %}" id="mandiForm">
+            <div class="form-group">
+              <label for="state">Select a state:</label>
+              <select class="form-control" id="state">
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="West Bengal">West Bengal</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="state">Select a crop:</label>
+              <select class="form-control" id="state">
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="West Bengal">West Bengal</option>
+              </select>
+            </div>
+            <div class="form-group">
+              Minimum price: {{minPrice}}
+            </div>
+            <div class="form-group">
+              Maximum price: {{maxPrice}}
+            </div>
+          </form>
+        </div>
+        <div>
+          <button class = "btn btn-primary" type="submit" form="mandiForm" value="Submit">
+            Submit
+          </button>
+        </div>
+        -->
+        <div class="form_container">
+          <form action="{% url 'prices' %}" id="mandiForm">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="stateOfMandi">Select a State:</label>
+                  <select name="stateOfMandi" id="stateOfMandi">
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Chattisgarh">Chattisgarh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="West Bengal">West Bengal</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="crop">Select a Crop:</label>
+                  <select name="crop" id="crop">
+                    <option value="Wheat">Wheat</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Millets">Millets</option>
+                    <option value="Green Gram (Moong)(Whole)">Green Gram (Moong)(Whole)</option>
+                    <option value="Sugarcane">Sugarcane</option>
+                    <option value="Maize">Maize</option>
+                    <option value="Guar">Guar</option>
+                    <option value="Grapes">Grapes</option>
+                    <option value="Ginger(Dry)">Ginger(Dry)</option>
+                    <option value="Beetroot">Beetroot</option>
+                    <option value="Bottle gourd">Bottle gourd</option>
+                    <option value="Mango">Mango</option>
+                    <option value="Lemon">Lemon</option>
+                    <option value="Kabuli Chana(Chickpeas-White)">Kabuli Chana(Chickpeas-White)</option>
+                    <option value="Mint(Pudina)">Mint(Pudina)</option>
+                    <option value="Coriander(Leaves)">Coriander(Leaves)</option>
+                    <option value="Cotton">Cotton</option>
+                    <option value="Jowar(Sorghum)">Jowar(Sorghum)</option>
+                    <option value="Gur(Jaggery)">Gur(Jaggery)</option>
+                    <option value="Methi(Leaves)">Methi(Leaves)</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Tomato">Tomato</option>
+                    <option value="Cotton">Cotton</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <p>State: {{state}}</p>
+                </div>
+                <div class="form-group">
+                  <p>Crop: {{crop}}</p>
+                </div>
+                <div class="form-group">
+                  Minimum price(per quintal): Rs.{{minPrice}}
+                  
+                  {% for each in data%}
+                  {{each}}
+
+                  {%endfor%}
+                </div>
+                <div class="form-group">
+                  Maximum price(per quintal): Rs.{{maxPrice}}
+                </div>
+              </div>
+            </div>
+          </form> 
+        </div> 
+        <div>
+          <button class = "btn btn-primary" type="submit" form="mandiForm" value="Submit">
+            Submit
+          </button>
+        </div>       
+              
+          
+      </div>
+      </div>
+    </section>
+  
+    <!-- end mandi section -->
+
+  <!-- contact section -->
+
+  <section class="info_section layout_padding section_pl" id="contactus">
+    <div class="container">
+      <div class="info_logo">
+        <a href="">
+          HealthyHarvest
+        </a>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              {% comment %} <a href="#">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Hyderabad, Telangana, INDIA
+                </span>
+              </a> {% endcomment %}
+              {% comment %} <a href="#">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a> {% endcomment %}
+              <a href="#">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  Email : parthsahani4786@gmail.com
+                </span>
+              </a>
+              <a href="main\templates\contact.html">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  Feedback Form 
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="#">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a href="">
+                Home
+              </a>
+              <a href="#crops">
+                Crops
+              </a>
+              <a href="#seasons">
+                Seasons
+              </a>
+              <a href="#about">
+                About
+              </a>
+              <a href="#cptool">
+                Crop Predictor
+              </a>
+              <a href="#mandi">
+                Check mandi prices
+              </a>
+              <a href="{% url 'climate' %}">
+                Climate and Condition
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved. 
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <script src="{% static 'main/js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'main/js/bootstrap.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="{% static 'main/js/custom.js' %}"></script>
+  <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+  <script>
+    function loadGoogleTranslate(){
+      new google.translate.TranslateElement("google_element");
+    }
+  </script>
+  
+</body>
+
+</html>

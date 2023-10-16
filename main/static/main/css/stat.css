@@ -1,0 +1,11 @@
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    background-color: #71a496;
+  }
+.contt{
+    font-size:50px;
+    /* margin-right: 17px;
+    padding-left: 10px;
+    padding-right: 12px; */
+}
